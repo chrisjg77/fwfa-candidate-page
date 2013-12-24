@@ -836,6 +836,7 @@ MEDIA QUERIES
 
   .donation-info .boom-counter {
     width: 100%;
+    padding-right: 0;
   }
 
   .donation-info .stats {
@@ -857,10 +858,18 @@ MEDIA QUERIES
     height: 2.2rem;
   }
 
-  .donation-info .mobile-button {
+  .donation-info .donate-button {
     float: right;
     width: 27%;
     margin-left: 3%;
+  }
+
+  .distribution-centers .address {
+    margin-top: 1.5em;
+  }
+
+  .distribution-centers .address:first-child {
+    margin-top: 0;
   }
 
   .donation-info .section-content,
@@ -897,6 +906,7 @@ MEDIA QUERIES
 
   .phone-banking .mobile-button {
     margin-top: 0;
+    padding: 0.5rem;
   }
 
 }
