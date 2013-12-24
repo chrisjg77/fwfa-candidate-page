@@ -1,0 +1,902 @@
+/*
+===============================================
+BASE STYLES
+===============================================
+*/
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #eee;
+}
+
+p {
+  margin: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+input[type='text'],
+select,
+textarea {
+  -webkit-border-radius:  0.25em;
+  -moz-border-radius:     0.25em;
+   border-radius:         0.25em;
+  -webkit-box-sizing:     border-box;
+  -moz-box-sizing:        border-box;
+   box-sizing:            border-box;
+}
+
+input[type='text'] {
+  width: 100%;
+  margin: 0;
+  padding: 0.75em;
+  border: 1px solid #ccc;
+}
+
+select {
+  width: 100%;
+  height: 2.75em;
+  margin: 0;
+  font-size: 1em;
+  -webkit-appearance: menulist-button;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.paddingfix {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+   box-sizing:        border-box;
+}
+
+.layout-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.layout-list li {
+  float: left;
+}
+
+
+/*
+===============================================
+BUTTONS
+===============================================
+*/
+
+.button {
+  display: inline-block;
+  padding: 0.75em;
+  text-align: center;
+  background: rgb(234,234,234); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(234,234,234,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(234,234,234,1)), color-stop(100%,rgba(204,204,204,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(234,234,234,1) 0%,rgba(204,204,204,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(234,234,234,1) 0%,rgba(204,204,204,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(234,234,234,1) 0%,rgba(204,204,204,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(234,234,234,1) 0%,rgba(204,204,204,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+  color: #000;
+  border: 1px solid #bbb;
+  -webkit-border-radius:  0.25em;
+  -moz-border-radius:     0.25em;
+   border-radius:         0.25em;
+  -webkit-box-sizing:     border-box;
+  -moz-box-sizing:        border-box;
+   box-sizing:            border-box;
+}
+
+.button:hover {
+  background: rgb(238,238,238); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(221,221,221,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(221,221,221,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(221,221,221,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(221,221,221,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(221,221,221,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(221,221,221,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+}
+
+.button.selected {
+  background: #666;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.3);
+  border-color: #333;
+  color: #fff;
+}
+
+.button-set .button-row {
+  margin-bottom: 2%;
+}
+
+.button-set .button-row > div {
+  float: left;
+}
+
+.button-row .button {
+  width: 100%;
+}
+
+.button-row.three-up > div,
+.button-row.one-up-field > div {
+  width: 32%;
+  margin-right: 2%;
+}
+
+.button-row.three-up > div:last-child {
+  margin-right: 0;
+}
+
+.button-row.one-up-field > div:last-child {
+  width: 66%;
+  margin: 0;
+}
+
+.button.hidden {
+  display: none;
+}
+
+
+/*
+===============================================
+TABS
+===============================================
+*/
+
+.tabs {
+  width: 100%;
+  display: table;
+  border-top: 1px solid #ddd;
+}
+
+.tabs li {
+  float: none;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.tabs li {
+  font-weight: bold;
+  color: #aaa;
+  background: #eee;
+}
+
+.tabs li.active {
+  color: #000;
+  background: transparent;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+
+/*
+===============================================
+SCAFFOLDING
+===============================================
+*/
+
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.base-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sidebar {
+  float: left;
+  width: 12rem;
+  padding-right: 2rem;
+}
+
+.body-content {
+  overflow: auto;
+  padding-left: 2rem;
+  border-left: 1px solid #ddd;
+}
+
+
+/*
+===============================================
+NAV BAR
+===============================================
+*/
+
+.nav-bar {
+  position: fixed;
+  width: 100%;
+}
+
+.nav-spacer {
+  height: 1.25em;
+  background: rgba(255,255,255,0.6);
+}
+
+.nav-content {
+  height: 4em;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 1px 8px rgba(0,0,0,0.4);
+}
+
+
+/*
+===============================================
+SIDEBAR
+===============================================
+*/
+
+.title-mobile {
+  display: none;
+}
+
+.title-desktop {
+  font-size: 1.1em;
+}
+
+.candidate-id img {
+  width: 100%;
+}
+
+.candidate-info .tabs {
+  display: none;
+}
+
+.candidate-info .tab-content {
+  display: block;
+}
+
+.sidebar-header {
+  font-size: 1.1em;
+  padding-bottom: 0.25em;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-content {
+  margin-bottom: 2em;
+}
+
+  /*
+  ========================= 
+  ACHIEVEMENTS
+  ========================= 
+  */
+
+  .achievements ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .achievements li {
+    display: table;
+    margin-top: 1em;
+  }
+
+  .achievements li:first-child {
+    margin-top: 0;
+  }
+
+  .achievements .icon,
+  .achievements .label {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .achievements .label {
+    font-size: 0.9em;
+  }
+
+  .achievements .icon-background {
+    width: 3em;
+    height: 3em;
+    background: #666;
+    color: #fff;
+    text-align: center;
+    -webkit-border-radius:  50%;
+    -moz-border-radius:     50%;
+     border-radius:         50%;
+  }
+
+  .achievements .icon-background i {
+    position: relative;
+    display: inline-block;
+    top: 0.5em;
+    font-size: 1.5em;
+  }
+
+  .achievements .label {
+    padding-left: 1em;
+    color: #666;
+  }
+
+  /*
+  ========================= 
+  ELECTIONS
+  ========================= 
+  */
+
+  .election-dates ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .election-dates li {
+    margin-top: 1em;
+  }
+
+  .election-dates li:first-child {
+    margin-top: 0;
+  }
+
+  .election-dates h4 {
+    margin: 0;
+    color: #444;
+    font-size: 0.95em;
+  }
+
+  .election-dates span {
+    font-size: 0.9em;
+    color: #666;
+  }
+
+  /*
+  ========================= 
+  CANDIDATE LINKS
+  ========================= 
+  */
+
+  .candidate-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .candidate-links li {
+    margin-top: 0.5em;
+  }
+
+  .candidate-links li:first-child {
+    margin-top: 0;
+  }
+
+  .candidate-links a {
+    font-size: 0.9em;
+  }
+
+
+/*
+===============================================
+BODY CONTENT
+===============================================
+*/
+
+h1 {
+  margin-top: 0;
+}
+
+.title-desktop {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.title-desktop .title-text,
+.title-desktop .subtitle-text {
+  display: block;
+}
+
+.title-desktop .title-text {
+  font-size: 1.5em;
+}
+
+.title-desktop .subtitle-text {
+  font-size: 0.85em;
+  font-weight: normal;
+  color: #666;
+}
+
+.title-mobile .social-networks-mobile a,
+.title-mobile .social-networks-mobile a:visited,
+.title-desktop .social-networks-desktop a,
+.title-desktop .social-networks-desktop a:visited {
+  display: inline-block;
+  width: 1.75em;
+  height: 1.75em;
+  margin-top: 0.25em;
+  font-size: 0.8em;
+  text-align: center;
+  color: #888;
+  border: 1px solid #888;
+  -webkit-border-radius:  50%;
+  -moz-border-radius:     50%;
+   border-radius:         50%;
+}
+
+.title-mobile .social-networks-mobile a i,
+.title-desktop .social-networks-desktop a i {
+  position: relative;
+  display: inline-block;
+  top: 0.25em;
+}
+
+.title-desktop .social-networks-desktop {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.title-desktop .social-networks-desktop a {
+  font-size: 1.1em;
+}
+
+h2 {
+  margin: 0;
+  padding: 0.5em 1em;
+  font-size: 1.1em;
+  background: #e7e7e7;
+  border-top: 1px solid #ddd;
+}
+
+.section-content {
+  padding: 1em;
+  margin-bottom: 1em;
+  font-size: 0.9em;
+}
+
+.donation-info .mobile-button,
+.phone-banking .mobile-button {
+  display: inline-block;
+  padding: 0.5rem;
+  text-align: center;
+  color: #fff;
+  background: #444;
+  border: none;
+  -webkit-border-radius:  1.25rem;
+  -moz-border-radius:     1.25rem;
+   border-radius:         1.25rem;
+  -webkit-box-sizing:     border-box;
+  -moz-box-sizing:        border-box;
+   box-sizing:            border-box;
+}
+
+  /*
+  ========================= 
+  DONATION INFO
+  ========================= 
+  */
+
+  .donation-info .section-content {
+    display: table;
+  }
+
+  .donation-info .boom-counter,
+  .donation-info .stats {
+    display: table-cell;
+  }
+
+  .boom-counter {
+    vertical-align: middle;
+    width: 75%;
+  }
+
+  .stats {
+    list-style: none;
+    width: 25%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .stats li {
+    text-align: right;
+    margin-bottom: 0.5em;
+  }
+
+  .stats li .stat-figure,
+  .stats li .stat-label {
+    display: block;
+  }
+
+  .stats li .stat-figure {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  .stats li .stat-label {
+    color: #666;
+    font-size: 0.9em;
+  }
+
+  .boom-counter-header {
+    margin-bottom: 0.5rem;
+  }
+
+  .boom-counter-header .progress {
+    color: #666;
+    font-size: 1.1em;
+  }
+
+  .boom-counter-header .progress-figures {
+    font-weight: bold;
+    color: #000;
+  }
+
+  .boom-counter-base {
+    float: left;
+    width: 100%;
+    height: 2.2rem;
+    border: 1px solid #ccc;
+    -webkit-border-radius:  1.25rem;
+    -moz-border-radius:     1.25rem;
+     border-radius:         1.25rem;
+  }
+
+  .boom-counter-fill {
+    width: 43.33333%;
+    height: 100%;
+    background: #66A344;
+    -webkit-border-radius:  1.25rem;
+    -moz-border-radius:     1.25rem;
+     border-radius:         1.25rem;
+  }
+
+  .donation-info .mobile-button,
+  .phone-banking .mobile-button {
+    display: inline-block;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 0.75em;
+  }
+
+  /*
+  ========================= 
+  GRASSROOTS TOOLKIT
+  ========================= 
+  */
+
+  
+
+  .distribution-centers .address {
+    float: left;
+    margin-right: 3em;
+  }
+
+  .distribution-centers .address:first-child {
+    margin-top: 0;
+  }
+
+  .distribution-centers .address span {
+    display: block;
+  }
+
+  .distribution-centers .phone-number {
+    margin-top: 0.5em;
+  }
+
+  .news-stream ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .news-stream li {
+    margin-top: 1.25em;
+    color: #666;
+  }
+
+  .news-stream li:first-child {
+    margin-top: 0;
+  }
+
+  .news-stream .twitter-username {
+    display: inline-block;
+    margin-right: 0.25em;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .news-stream .date {
+    font-size: 0.85em;
+    color: #999;
+    margin-top: 0.5em;
+  }
+
+
+/*
+===============================================
+MEDIA QUERIES
+===============================================
+*/
+
+@media (max-width: 900px) {
+
+  .boom-counter {
+    padding-right: 1em;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  /*
+  ========================= 
+  BASE
+  ========================= 
+  */
+
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  /*
+  ========================= 
+  SCAFFOLDING
+  ========================= 
+  */
+
+  .wrapper {
+    padding: 0;
+  }
+
+  .sidebar,
+  .body-content {
+    width: 100%;
+    float: none;
+    padding: 0;
+  }
+
+  /*
+  ========================= 
+  NAV BAR
+  ========================= 
+  */
+
+  .nav-spacer {
+    display: none;
+  }
+
+  .nav-content {
+    height: 3em;
+  }
+
+  /*
+  ========================= 
+  SIDEBAR
+  ========================= 
+  */
+
+  .candidate-id {
+    display: table;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .title-desktop {
+    display: none;
+  }
+
+  .title-mobile {
+    display: block;
+  }
+
+  .photo,
+  .title-mobile {
+    display: table-cell;
+  }
+
+  .photo {
+    width: 20%;
+  }
+
+  .photo img {
+    max-width: 100%;
+  }
+
+  .title-mobile {
+    width: 80%;
+    margin: 0;
+    padding-left: 1rem;
+    vertical-align: middle;
+    font-size: 1.4rem;
+  }
+
+  .title-mobile .title-text,
+  .title-mobile .subtitle-text,
+  .title-mobile .social-networks-mobile {
+    display: block;
+  }
+
+  .title-mobile .subtitle-text {
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  .sidebar-header {
+    display: none;
+  }
+
+  .achievements,
+  .election-dates,
+  .candidate-links {
+    padding: 1rem;
+  }
+
+  .tab-content {
+    margin-bottom: 0;
+  }
+
+  .candidate-links a {
+    font-size: 1em;
+  }
+
+  .candidate-info .tabs {
+    display: table;
+  }
+
+  .candidate-info .tab-content {
+    display: none;
+  }
+
+  .candidate-info .tab-content.active {
+    display: block;
+  }
+
+  .candidate-info .tabs li {
+    width: 33.33333%;
+    height: 2.5rem;
+    font-size: 0.9em;
+  }
+
+  .achievements .label {
+    font-size: 1em;
+  }
+
+  .election-dates h4 {
+    margin: 0 0 0.25em 0;
+    font-size: 1.1em;
+  }
+
+  /*
+  ========================= 
+  BODY CONTENT
+  ========================= 
+  */
+
+  .body-content {
+    border-top: 1px solid #ddd;
+  }
+
+  .body-content h2 {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    font-size: 1.1em;
+    background: #eee;
+    border-top: none;
+  }
+
+  .section-content {
+    font-size: 1em;
+  }
+
+  .mobile-button {
+    display: inline-block;
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    color: #fff;
+    background: #444;
+    border: none;
+    -webkit-border-radius:  1.25rem;
+    -moz-border-radius:     1.25rem;
+     border-radius:         1.25rem;
+    -webkit-box-sizing:     border-box;
+    -moz-box-sizing:        border-box;
+     box-sizing:            border-box;
+  }
+
+  .donation-info .mobile-button {
+    margin-top: 0;
+  }
+
+  .donation-info .boom-counter {
+    width: 100%;
+  }
+
+  .donation-info .stats {
+    display: none;
+  }
+
+  .boom-counter-header .progress {
+    color: #666;
+    font-size: 0.9em;
+  }
+
+  .boom-counter-header .progress {
+    font-size: 0.9em;
+  }
+
+  .boom-counter-base {
+    float: left;
+    width: 70%;
+    height: 2.2rem;
+  }
+
+  .donation-info .mobile-button {
+    float: right;
+    width: 27%;
+    margin-left: 3%;
+  }
+
+  .donation-info .section-content,
+  .phone-banking .section-content,
+  .distribution-centers .section-content,
+  .news-stream .section-content {
+    padding: 1rem;
+  }
+
+  .phone-banking,
+  .distribution-centers,
+  .news-stream {
+    border-top: 1px solid #ddd;
+  }
+
+  .grassroots-toolkit p {
+    font-size: 0.9em;
+    color: #666;
+  }
+
+  .phone-banking p,
+  .phone-banking .phone-banking-button {
+    float: left;
+  }
+
+  .phone-banking p {
+    width: 68%;
+  }
+
+  .phone-banking .phone-banking-button {
+    width: 27%;
+    margin-left: 5%;
+  }
+
+  .phone-banking .mobile-button {
+    margin-top: 0;
+  }
+
+}
