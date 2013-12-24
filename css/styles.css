@@ -204,11 +204,26 @@ SCAFFOLDING
 
 .wrapper {
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2em;
 }
 
 .base-container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.sidebar {
+  float: left;
+  width: 12rem;
+  padding-right: 2rem;
+}
+
+.body-content {
+  overflow: auto;
+  padding-left: 2rem;
+  border-left: 1px solid #ddd;
 }
 
 
@@ -245,6 +260,14 @@ SIDEBAR
   display: none;
 }
 
+.title-desktop {
+  font-size: 1.1em;
+}
+
+.candidate-id img {
+  width: 100%;
+}
+
 .candidate-info .tabs {
   display: none;
 }
@@ -253,6 +276,126 @@ SIDEBAR
   display: block;
 }
 
+.sidebar-header {
+  font-size: 1.1em;
+  padding-bottom: 0.25em;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-content {
+  margin-bottom: 2em;
+}
+
+  /*
+  ========================= 
+  ACHIEVEMENTS
+  ========================= 
+  */
+
+  .achievements ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .achievements li {
+    display: table;
+    margin-top: 1em;
+  }
+
+  .achievements li:first-child {
+    margin-top: 0;
+  }
+
+  .achievements .icon,
+  .achievements .label {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .achievements .label {
+    font-size: 0.9em;
+  }
+
+  .achievements .icon-background {
+    width: 3em;
+    height: 3em;
+    background: #666;
+    color: #fff;
+    text-align: center;
+    -webkit-border-radius:  50%;
+    -moz-border-radius:     50%;
+     border-radius:         50%;
+  }
+
+  .achievements .icon-background i {
+    position: relative;
+    display: inline-block;
+    top: 0.5em;
+    font-size: 1.5em;
+  }
+
+  .achievements .label {
+    padding-left: 1em;
+    color: #666;
+  }
+
+  /*
+  ========================= 
+  ELECTIONS
+  ========================= 
+  */
+
+  .election-dates ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .election-dates li {
+    margin-top: 1em;
+  }
+
+  .election-dates li:first-child {
+    margin-top: 0;
+  }
+
+  .election-dates h4 {
+    margin: 0;
+    color: #444;
+    font-size: 0.95em;
+  }
+
+  .election-dates span {
+    font-size: 0.9em;
+    color: #666;
+  }
+
+  /*
+  ========================= 
+  CANDIDATE LINKS
+  ========================= 
+  */
+
+  .candidate-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .candidate-links li {
+    margin-top: 0.5em;
+  }
+
+  .candidate-links li:first-child {
+    margin-top: 0;
+  }
+
+  .candidate-links a {
+    font-size: 0.9em;
+  }
+
 
 /*
 ===============================================
@@ -260,11 +403,140 @@ BODY CONTENT
 ===============================================
 */
 
+h1 {
+  margin-top: 0;
+}
+
+.title-desktop {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.title-desktop .title-text,
+.title-desktop .subtitle-text {
+  display: block;
+}
+
+.title-desktop .title-text {
+  font-size: 1.5em;
+}
+
+.title-desktop .subtitle-text {
+  font-size: 0.85em;
+  font-weight: normal;
+  color: #666;
+}
+
+.title-mobile .social-networks-mobile a,
+.title-mobile .social-networks-mobile a:visited,
+.title-desktop .social-networks-desktop a,
+.title-desktop .social-networks-desktop a:visited {
+  display: inline-block;
+  width: 1.75em;
+  height: 1.75em;
+  margin-top: 0.25em;
+  font-size: 0.8em;
+  text-align: center;
+  color: #888;
+  border: 1px solid #888;
+  -webkit-border-radius:  50%;
+  -moz-border-radius:     50%;
+   border-radius:         50%;
+}
+
+.title-mobile .social-networks-mobile a i,
+.title-desktop .social-networks-desktop a i {
+  position: relative;
+  display: inline-block;
+  top: 0.25em;
+}
+
+.title-desktop .social-networks-desktop {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.title-desktop .social-networks-desktop a {
+  font-size: 1.1em;
+}
+
+h2 {
+  margin: 0;
+  padding: 0.5em 1em;
+  font-size: 1.1em;
+  background: #e7e7e7;
+  border-top: 1px solid #ddd;
+}
+
+.section-content {
+  padding: 1em;
+  margin-bottom: 1em;
+  font-size: 0.9em;
+}
+
+.donation-info .mobile-button,
+.phone-banking .mobile-button {
+  display: inline-block;
+  padding: 0.5rem;
+  text-align: center;
+  color: #fff;
+  background: #444;
+  border: none;
+  -webkit-border-radius:  1.25rem;
+  -moz-border-radius:     1.25rem;
+   border-radius:         1.25rem;
+  -webkit-box-sizing:     border-box;
+  -moz-box-sizing:        border-box;
+   box-sizing:            border-box;
+}
+
   /*
   ========================= 
   DONATION INFO
   ========================= 
   */
+
+  .donation-info .section-content {
+    display: table;
+  }
+
+  .donation-info .boom-counter,
+  .donation-info .stats {
+    display: table-cell;
+  }
+
+  .boom-counter {
+    vertical-align: middle;
+    width: 75%;
+  }
+
+  .stats {
+    list-style: none;
+    width: 25%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .stats li {
+    text-align: right;
+    margin-bottom: 0.5em;
+  }
+
+  .stats li .stat-figure,
+  .stats li .stat-label {
+    display: block;
+  }
+
+  .stats li .stat-figure {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  .stats li .stat-label {
+    color: #666;
+    font-size: 0.9em;
+  }
 
   .boom-counter-header {
     margin-bottom: 0.5rem;
@@ -272,7 +544,7 @@ BODY CONTENT
 
   .boom-counter-header .progress {
     color: #666;
-    font-size: 0.9em;
+    font-size: 1.1em;
   }
 
   .boom-counter-header .progress-figures {
@@ -282,7 +554,7 @@ BODY CONTENT
 
   .boom-counter-base {
     float: left;
-    width: 70%;
+    width: 100%;
     height: 2.2rem;
     border: 1px solid #ccc;
     -webkit-border-radius:  1.25rem;
@@ -299,10 +571,12 @@ BODY CONTENT
      border-radius:         1.25rem;
   }
 
-  .donation-info .mobile-button {
-    float: right;
-    width: 27%;
-    margin-left: 3%;
+  .donation-info .mobile-button,
+  .phone-banking .mobile-button {
+    display: inline-block;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 0.75em;
   }
 
   /*
@@ -311,18 +585,51 @@ BODY CONTENT
   ========================= 
   */
 
-  .phone-banking p,
-  .phone-banking .phone-banking-button {
+  
+
+  .distribution-centers .address {
     float: left;
+    margin-right: 3em;
   }
 
-  .phone-banking p {
-    width: 68%;
+  .distribution-centers .address:first-child {
+    margin-top: 0;
   }
 
-  .phone-banking .phone-banking-button {
-    width: 27%;
-    margin-left: 5%;
+  .distribution-centers .address span {
+    display: block;
+  }
+
+  .distribution-centers .phone-number {
+    margin-top: 0.5em;
+  }
+
+  .news-stream ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .news-stream li {
+    margin-top: 1.25em;
+    color: #666;
+  }
+
+  .news-stream li:first-child {
+    margin-top: 0;
+  }
+
+  .news-stream .twitter-username {
+    display: inline-block;
+    margin-right: 0.25em;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .news-stream .date {
+    font-size: 0.85em;
+    color: #999;
+    margin-top: 0.5em;
   }
 
 
@@ -331,6 +638,14 @@ BODY CONTENT
 MEDIA QUERIES
 ===============================================
 */
+
+@media (max-width: 900px) {
+
+  .boom-counter {
+    padding-right: 1em;
+  }
+
+}
 
 @media (max-width: 767px) {
 
@@ -346,6 +661,23 @@ MEDIA QUERIES
 
   body {
     background: #fff;
+  }
+
+  /*
+  ========================= 
+  SCAFFOLDING
+  ========================= 
+  */
+
+  .wrapper {
+    padding: 0;
+  }
+
+  .sidebar,
+  .body-content {
+    width: 100%;
+    float: none;
+    padding: 0;
   }
 
   /*
@@ -415,31 +747,22 @@ MEDIA QUERIES
     color: #666;
   }
 
-  .title-mobile .social-networks-mobile a,
-  .title-mobile .social-networks-mobile a:visited {
-    display: inline-block;
-    width: 1.75em;
-    height: 1.75em;
-    margin-top: 0.25em;
-    font-size: 0.8em;
-    text-align: center;
-    color: #888;
-    border: 1px solid #888;
-    -webkit-border-radius:  50%;
-    -moz-border-radius:     50%;
-     border-radius:         50%;
-  }
-
-  .title-mobile .social-networks-mobile a i {
-    position: relative;
-    display: inline-block;
-    top: 0.25em;
+  .sidebar-header {
+    display: none;
   }
 
   .achievements,
   .election-dates,
   .candidate-links {
     padding: 1rem;
+  }
+
+  .tab-content {
+    margin-bottom: 0;
+  }
+
+  .candidate-links a {
+    font-size: 1em;
   }
 
   .candidate-info .tabs {
@@ -460,6 +783,15 @@ MEDIA QUERIES
     font-size: 0.9em;
   }
 
+  .achievements .label {
+    font-size: 1em;
+  }
+
+  .election-dates h4 {
+    margin: 0 0 0.25em 0;
+    font-size: 1.1em;
+  }
+
   /*
   ========================= 
   BODY CONTENT
@@ -475,6 +807,11 @@ MEDIA QUERIES
     padding: 0.5rem 1rem;
     font-size: 1.1em;
     background: #eee;
+    border-top: none;
+  }
+
+  .section-content {
+    font-size: 1em;
   }
 
   .mobile-button {
@@ -493,6 +830,39 @@ MEDIA QUERIES
      box-sizing:            border-box;
   }
 
+  .donation-info .mobile-button {
+    margin-top: 0;
+  }
+
+  .donation-info .boom-counter {
+    width: 100%;
+  }
+
+  .donation-info .stats {
+    display: none;
+  }
+
+  .boom-counter-header .progress {
+    color: #666;
+    font-size: 0.9em;
+  }
+
+  .boom-counter-header .progress {
+    font-size: 0.9em;
+  }
+
+  .boom-counter-base {
+    float: left;
+    width: 70%;
+    height: 2.2rem;
+  }
+
+  .donation-info .mobile-button {
+    float: right;
+    width: 27%;
+    margin-left: 3%;
+  }
+
   .donation-info .section-content,
   .phone-banking .section-content,
   .distribution-centers .section-content,
@@ -509,6 +879,24 @@ MEDIA QUERIES
   .grassroots-toolkit p {
     font-size: 0.9em;
     color: #666;
+  }
+
+  .phone-banking p,
+  .phone-banking .phone-banking-button {
+    float: left;
+  }
+
+  .phone-banking p {
+    width: 68%;
+  }
+
+  .phone-banking .phone-banking-button {
+    width: 27%;
+    margin-left: 5%;
+  }
+
+  .phone-banking .mobile-button {
+    margin-top: 0;
   }
 
 }
