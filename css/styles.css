@@ -656,6 +656,45 @@ h2 {
     margin-top: 0.5em;
   }
 
+  .downloads ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .downloads li {
+    float: left;
+    width: 33.3333%;
+    display: table;
+  }
+
+  .downloads .file-icon,
+  .downloads .file-meta {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  .downloads .file-icon {
+    width: 2.5em;
+  }
+
+  .downloads .file-icon i {
+    font-size: 2.5em;
+    color: #999;
+  }
+
+  .downloads .file-name,
+  .downloads .file-details {
+    display: block;
+    padding-right: 1em;
+  }
+
+  .downloads .file-details {
+    font-size: 0.75em;
+    margin-top: 0.35em;
+    color: #999;
+  }
+
   .news-stream ul {
     list-style: none;
     margin: 0;
@@ -938,6 +977,16 @@ MEDIA QUERIES
   .distribution-centers .section-content,
   .news-stream .section-content {
     padding: 1rem;
+  }
+
+  .downloads ul li {
+    float: none;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .downloads ul li:last-child {
+    margin-bottom: 0;
   }
 
   .phone-banking,
