@@ -256,12 +256,20 @@ SIDEBAR
 ===============================================
 */
 
+.sidebar.mobile {
+  display: none;
+}
+
 .title-mobile {
   display: none;
 }
 
 .title-desktop {
   font-size: 1.1em;
+}
+
+.candidate-id.mobile {
+  display: none;
 }
 
 .candidate-id img {
@@ -637,8 +645,6 @@ h2 {
   ========================= 
   */
 
-  
-
   .distribution-centers .address {
     float: left;
     margin-right: 3em;
@@ -771,6 +777,14 @@ MEDIA QUERIES
     padding: 0;
   }
 
+  .sidebar.mobile {
+    display: block;
+  }
+
+  .sidebar.desktop {
+    display: none;
+  }
+
   /*
   ========================= 
   NAV BAR
@@ -791,10 +805,14 @@ MEDIA QUERIES
   ========================= 
   */
 
-  .candidate-id {
+  .candidate-id.mobile {
     display: table;
     width: 100%;
     padding: 1rem;
+  }
+
+  .candidate-id.desktop {
+    display: none;
   }
 
   .title-desktop {
