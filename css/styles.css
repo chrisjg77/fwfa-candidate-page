@@ -289,6 +289,58 @@ SIDEBAR
 
   /*
   ========================= 
+  OPPONENTS
+  ========================= 
+  */
+
+  .opponents ul {
+    list-style: none;
+    margin: 0.75em 0 0 0;
+    padding: 0;
+  }
+
+  .opponents ul li {
+    display: table;
+    font-size: 0.9em;
+  }
+
+  .opponents ul .opponent-photo,
+  .opponents ul .opponent-meta {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .opponents ul .opponent-photo {
+    width: 25%;
+  }
+
+  .opponents ul .opponent-photo img {
+    width: 100%;
+  }
+
+  .opponents ul .opponent-meta {
+    width: 75%;
+    padding-left: 1em;
+  }
+
+  .opponent-meta .opponent-name,
+  .opponent-meta .opponent-info {
+    display: block;
+  }
+
+  .opponent-meta .opponent-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #444;
+  }
+
+  .opponent-meta .opponent-info {
+    color: #666;
+    margin-top: 0.15em;
+  }
+
+  /*
+  ========================= 
   ACHIEVEMENTS
   ========================= 
   */
@@ -751,6 +803,7 @@ MEDIA QUERIES
     display: none;
   }
 
+  .opponents,
   .achievements,
   .election-dates,
   .candidate-links {
@@ -759,6 +812,14 @@ MEDIA QUERIES
 
   .tab-content {
     margin-bottom: 0;
+  }
+
+  .opponents ul {
+    margin-top: 0;
+  }
+
+  .opponents ul .opponent-photo {
+    width: 10%;
   }
 
   .candidate-links a {
@@ -778,9 +839,9 @@ MEDIA QUERIES
   }
 
   .candidate-info .tabs li {
-    width: 33.33333%;
+    width: auto;
     height: 2.5rem;
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 
   .achievements .label {
