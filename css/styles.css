@@ -315,8 +315,6 @@ SIDEBAR
 
   /*
   ========================= 
-<<<<<<< HEAD
-=======
   OPPONENTS
   ========================= 
   */
@@ -369,7 +367,6 @@ SIDEBAR
 
   /*
   ========================= 
->>>>>>> gh-pages
   ACHIEVEMENTS
   ========================= 
   */
@@ -491,7 +488,7 @@ h1 {
 .title-desktop {
   position: relative;
   margin-bottom: 0.5em;
-  background: #1c3744;
+  background: #1c3744 url('../img/page-title-pattern.jpg');
   color: #fff;
   padding: 1em 1rem 1em 1.3rem;
   width: 97%;
@@ -551,16 +548,24 @@ h1 {
 
 h2 {
   margin: 0;
-  padding: 0.5em 1em;
+  padding-right: 15px;
   font-size: 1.1em;
-  background: #4488ab;
+  background: url('../img/box-label-right.png') no-repeat 100% 0;
+  background-size: auto 100%;
   color: #fff;
-  border-top: 1px solid #ddd;
   text-shadow: -1px -1px 0px rgba(0,0,0,0.3)
 }
 
+h2 span {
+  padding: 0.5em 0 0.5em 2%;
+  width: 97%;
+  display: block;
+  background: #4488ab;
+}
+
 .section-content {
-  padding: 1em;
+  padding: 2em;
+  padding-right: 3em;
   margin-bottom: 1em;
   font-size: 0.9em;
 }
@@ -587,30 +592,29 @@ h2 {
   ========================= 
   */
 
-  .donation-info .section-content {
-    display: table;
+.section-content {
   }
 
   .donation-info .boom-counter,
   .donation-info .stats {
-    display: table-cell;
   }
 
   .boom-counter {
     vertical-align: middle;
-    width: 75%;
+    width: 100%;
   }
 
   .stats {
     list-style: none;
-    width: 25%;
+    width: 100%;
     padding: 0;
-    margin: 0;
+    margin: 2em 0;
   }
 
   .stats li {
-    text-align: right;
-    margin-bottom: 0.5em;
+    text-align: right; 
+    margin: 0 1em 0.5em;
+    display: inline-block;
   }
 
   .stats li .stat-figure,
@@ -629,6 +633,8 @@ h2 {
   }
 
   .boom-counter-header {
+    width: 74%;
+    display: inline-block;
     margin-bottom: 0.5rem;
   }
 
@@ -643,8 +649,9 @@ h2 {
   }
 
   .boom-counter-base {
+    width: 74%;
+    display: inline-block;
     float: left;
-    width: 100%;
     height: 2.2rem;
     border: 1px solid #ccc;
     -webkit-border-radius:  1.25rem;
@@ -664,9 +671,12 @@ h2 {
   .donation-info .mobile-button,
   .phone-banking .mobile-button {
     display: inline-block;
-    padding-left: 1em;
-    padding-right: 1em;
-    margin-top: 0.75em;
+    vertical-align: top;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 0.1em;
+    margin-left: 0.75em;
+    width: 23%;
   }
 
   /*
@@ -964,6 +974,7 @@ MEDIA QUERIES
 
   .section-content {
     font-size: 1em;
+    padding-right: 1em;
   }
 
   .mobile-button {
@@ -1103,11 +1114,11 @@ MEDIA QUERIES
     text-transform: uppercase;
     text-shadow: 0 -1px 0 rgba(0,0,0,0.6);
     font-weight: bold;
-    -webkit-transition: all 0.15s ease-in-out;
-    -moz-transition: all 0.15s ease-in-out;
-    -ms-transition: all 0.15s ease-in-out;
-    -o-transition: all 0.15s ease-in-out;
-    transition: all 0.15s ease-in-out;
+    -webkit-transition: opacity 0.15s ease-in-out;
+    -moz-transition: opacity 0.15s ease-in-out;
+    -ms-transition: opacity 0.15s ease-in-out;
+    -o-transition: opacity 0.15s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
   }
 
 }
