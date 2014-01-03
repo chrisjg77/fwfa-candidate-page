@@ -30,6 +30,9 @@ $(function() {
 
   $(document).ready(function() {
     setContentOffset('.nav-bar', '.wrapper');
+
+    $('.boom-counter-fill').removeClass('start');
+
   });
 
 
@@ -57,7 +60,7 @@ $(function() {
     var window_h = $(this).height();
     var sidebar_h = $('.sidebar').height();
 
-    if (window_h > sidebar_h) {
+    if (window_h > sidebar_h+112) {
 
       $('.sidebar-inner').css('top',$(this).scrollTop());
 
@@ -67,8 +70,8 @@ $(function() {
 
     }
 
-
   });
+
 
 
 });

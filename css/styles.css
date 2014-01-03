@@ -492,8 +492,8 @@ h1 {
   margin-bottom: 0.5em;
   background: #1c3744 url('../img/page-title-pattern.jpg');
   color: #fff;
-  padding: 1em 1rem 1em 1.3rem;
-  width: 96.1%;
+  padding: 1em 1px;
+  width: 100%;
   left: -1px;
   text-shadow: -1px -1px 0px rgba(0,0,0,0.3)
 }
@@ -501,6 +501,7 @@ h1 {
 .title-desktop .title-text,
 .title-desktop .subtitle-text {
   display: block;
+  padding-left: 1.4rem;
 }
 
 .title-desktop .title-text {
@@ -536,7 +537,12 @@ h1 {
   position: relative;
   display: inline-block;
   top: 0.25em;
+   -webkit-transition: all 0.25s;
+   -moz-transition: all 0.25s;
+   transition: all 0.25s;
 }
+
+.title-desktop .social-networks-desktop a:hover i { top: 0.05em; }
 
 .title-desktop .social-networks-desktop {
   position: absolute;
@@ -569,7 +575,6 @@ h2 span {
 .section-content {
   padding: 2em;
   padding-right: 3em;
-  margin-bottom: 1em;
   font-size: 0.9em;
 }
 
@@ -611,13 +616,15 @@ h2 span {
     list-style: none;
     width: 100%;
     padding: 0;
-    margin: 2em 0;
+    margin: 2em 0 1em;
   }
 
   .stats li {
     text-align: right; 
-    margin: 0 1em 0.5em;
+    padding: 5px 0 0 1em;
+    margin: 0 1em 0;
     display: inline-block;
+    border-top: 2px solid #ddd;
   }
 
   .stats li .stat-figure,
@@ -669,7 +676,21 @@ h2 span {
     -webkit-border-radius:  1.25rem;
     -moz-border-radius:     1.25rem;
      border-radius:         1.25rem;
+
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    transition: all 2s;
+
   }
+
+  .boom-counter-fill.start {
+
+    width: 0;
+    background: #c9431b;
+
+  }
+  
+
 
   .donation-info .mobile-button,
   .phone-banking .mobile-button {
@@ -1093,6 +1114,10 @@ MEDIA QUERIES
   .sidebar-inner { 
     width: 220px;
     position: relative; 
+    /*
+    -webkit-transition: all 0.15s;
+    transition: all 0.15s;
+    */
   }
 
   .body-content { 
@@ -1124,6 +1149,11 @@ MEDIA QUERIES
     -o-transition: opacity 0.15s ease-in-out;
     transition: opacity 0.15s ease-in-out;
   }
+
+  .phone-banking .section-content { margin: 1em 0 3em; }
+  .phone-banking .section-content p { width: 74%; float: left; }
+  .phone-banking .phone-banking-button a { width: 23%; float: left; margin-top: -0.5em; }
+
 
 }
 
