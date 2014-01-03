@@ -489,7 +489,7 @@ h1 {
 
 .title-desktop {
   position: relative;
-  margin-bottom: 0.5em;
+  margin-bottom: 0;
   background: #1c3744 url('../img/page-title-pattern.jpg');
   color: #fff;
   padding: 1em 1px;
