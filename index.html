@@ -14,71 +14,103 @@
 
   <body>
 
-    <div class="nav-bar">
-      <div class="nav-spacer">
-        &nbsp;
-      </div>
-      <div class="nav-content">
-        &nbsp;
-      </div>
-    </div>
+    <div id="header-wrapper">
+          <div class="nav-spacer"></div>
+
+          <div class='nav-content'>
+            <header class="wrapper">
+              <div class="row">
+                <div id="logo" class="span3">
+                  <div class="inner">
+                    <a href="http://www.freedomworksforamerica.org" rel="home"><img src="img/fwfa-logo.png" alt="Home" title="Home" width="224" height="92"></a>                  </div>
+                </div>
+              </div>
+            </header>
+          </div>
+        </div>
 
     <div class="wrapper clearfix paddingfix">
 
-      <!-- Begin Sidebar -->
-      <div class="sidebar">
-
-        <div class="candidate-id">
-          <div class="photo">
-            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Justin_Amash,_official_portrait,_112th_Congress.jpg/220px-Justin_Amash,_official_portrait,_112th_Congress.jpg">
-          </div>
-
-          <h1 class="title-mobile">
-            <span class="title-text">Justin Amash</span>
-            <span class="subtitle-text">Incumbent &ndash; R-MI 3rd District</span>
-            <span class="social-networks-mobile">
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-google-plus"></i></a>
-            </span>
-          </h1>
+      <!-- Mobile Candidate Info -->
+      <div class="candidate-id mobile">
+        <div class="photo">
+          <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Justin_Amash,_official_portrait,_112th_Congress.jpg/220px-Justin_Amash,_official_portrait,_112th_Congress.jpg">
         </div>
 
-        <div class="candidate-info">
+        <h1 class="title-mobile">
+          <span class="title-text">Justin Amash</span>
+          <span class="subtitle-text">Incumbent &ndash; R-MI 3rd District</span>
+          <span class="social-networks-mobile">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+          </span>
+        </h1>
+      </div>
+      <!-- / Mobile Candidate Info -->
 
-          <ul class="tabs layout-list">
-            <li class="active" id="tab-1">Achievements</li>
-            <li id="tab-2">Elections</li>
-            <li id="tab-3">Links</li>
-          </ul>
+      <!-- Begin Sidebar Desktop -->
+      <div class="sidebar desktop">
 
-          <div class="tab-content achievements active" id="tab-1-content">
-            <h3 class="sidebar-header">Achievements</h3>
-            <ul>
-              <li class="clearfix">
-                <div class="icon">
-                  <div class="icon-background">
-                    <i class="fa fa-check"></i>
-                  </div>
-                </div>
-                <div class="label">
-                  <span>FreedomWorks for America Endorsed</span>
-                </div>
-              </li>
-              <li>
-                <div class="icon">
-                  <div class="icon-background">
-                    <i class="fa fa-heart"></i>
-                  </div>
-                </div>
-                <div class="label">
-                  <span>Some Other FreedomWorks Award</span>
-                </div>
-              </li>
-            </ul>
+        <div class='sidebar-inner'>
+          <div class="candidate-id desktop">
+            <div class="photo">
+              <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Justin_Amash,_official_portrait,_112th_Congress.jpg/220px-Justin_Amash,_official_portrait,_112th_Congress.jpg">
+            </div>
+
+            <h1 class="title-mobile">
+              <span class="title-text">Justin Amash</span>
+              <span class="subtitle-text">Incumbent &ndash; R-MI 3rd District</span>
+              <span class="social-networks-mobile">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+              </span>
+            </h1>
           </div>
 
-          <div class="tab-content election-dates" id="tab-2-content">
+          <div class="candidate-info">
+
+            <div class="tab-content opponents active">
+              <h3 class="sidebar-header">Opponents</h3>
+              <ul>
+                <li>
+                  <div class="opponent-photo"><img src="img/ellis.jpg" /></div>
+                  <div class="opponent-meta">
+                    <span class="opponent-name">Brian Ellis</span>
+                    <span class="opponent-info">Candidate &ndash; R</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-content achievements">
+              <h3 class="sidebar-header">Achievements</h3>
+              <ul>
+                <li class="clearfix">
+                  <div class="icon">
+                    <div class="icon-background">
+                      <i class="fa fa-check"></i>
+                    </div>
+                  </div>
+                  <div class="label">
+                    <span>FreedomWorks for America Endorsed</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="icon">
+                    <div class="icon-background">
+                      <i class="fa fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="label">
+                    <span>Some Other FreedomWorks Award</span>
+                  </div>
+                </li>
+              </ul>
+          </div>
+
+          <div class="tab-content election-dates">
             <h3 class="sidebar-header">Elections</h3>
             <ul>
               <li>
@@ -92,7 +124,8 @@
             </ul>
           </div>
 
-          <div class="tab-content candidate-links" id="tab-3-content">
+
+          <div class="tab-content candidate-links">
             <h3 class="sidebar-header">Links</h3>
             <ul>
               <li><a href="#">Campaign Site</a></li>
@@ -102,8 +135,9 @@
           </div>
         </div>
 
+        </div>
       </div>
-      <!-- End Sidebar -->
+      <!-- End Sidebar Desktop -->
 
       <!-- Begin Body Content -->
       <div class="body-content">
@@ -117,6 +151,12 @@
             <a href="#"><i class="fa fa-google-plus"></i></a>
           </span>
         </h1>
+
+        <div class='bio'>
+          <div class='section-content'>
+            <p>Justin Amash is Kissing gourami bigscale fish goatfish catfish three spot gourami baikal oilfish. Blue shark barramundi jellynose fish bonytongue brown trout deepwater cardinalfish. Antarctic cod boarfish lake whitefish bangus lungfish, needlefish kissing gourami." Chain pickerel Australian herring pufferfish, brook trout flier roanoke bass loweye catfish? Beachsalmon: aholehole alooh tiger shark rough pomfret longnose lancetfish yellowfin cutthroat trout. Asian carps--ponyfish surf sardine bigeye scabbard fish tubeblenny; mail-cheeked fish. Opah sunfish, "bandfish sandburrower temperate bass cherry salmon cardinalfish unicorn fish.</p>
+          </div>
+        </div>
 
         <div class="donation-info clearfix">
           <h2>Make a Donation</h2>
@@ -164,7 +204,8 @@
           </div>
 
           <div class="distribution-centers">
-            <h2>Get Materials</h2>
+
+            <h2>Find Distribution Centers</h2>
             <div class="section-content clearfix">
               <div class="address">
                 <span class="address-line-one">123 Anywhere Street</span>
@@ -176,6 +217,36 @@
                 <span class="address-line-two">Anytown, USA 00000</span>
                 <span class="phone-number">(000) 000-0000</span>
               </div>
+            </div>
+          </div>
+
+
+          <div class="downloads">
+            <h2>Download Materials</h2>
+            <div class="section-content">
+              <ul class="download-list clearfix">
+                <li>
+                  <div class="file-icon"><i class="fa fa-file-o"></i></div>
+                  <div class="file-meta">
+                    <span class="file-name">Miscellaenous Candidate Research Material</span>
+                    <span class="file-details">112 Kb &ndash; PDF</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="file-icon"><i class="fa fa-file-o"></i></div>
+                  <div class="file-meta">
+                    <span class="file-name">Miscellaenous Candidate Research Material</span>
+                    <span class="file-details">112 Kb &ndash; PDF</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="file-icon"><i class="fa fa-file-o"></i></div>
+                  <div class="file-meta">
+                    <span class="file-name">Miscellaenous Candidate Research Material</span>
+                    <span class="file-details">112 Kb &ndash; PDF</span>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -212,7 +283,103 @@
       </div>
       <!-- End Body Content -->
 
+      <!-- Begin Sidebar Mobile -->
+      <div class="sidebar mobile">
+
+        <div class="candidate-id desktop">
+          <div class="photo">
+            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Justin_Amash,_official_portrait,_112th_Congress.jpg/220px-Justin_Amash,_official_portrait,_112th_Congress.jpg">
+          </div>
+
+          <h1 class="title-mobile">
+            <span class="title-text">Justin Amash</span>
+            <span class="subtitle-text">Incumbent &ndash; R-MI 3rd District</span>
+            <span class="social-networks-mobile">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-google-plus"></i></a>
+            </span>
+          </h1>
+        </div>
+
+        <div class="candidate-info">
+
+          <ul class="tabs layout-list">
+            <li class="active" id="tab-1">Opponent(s)</li>
+            <li id="tab-2">Achievements</li>
+            <li id="tab-3">Elections</li>
+            <li id="tab-4">Links</li>
+          </ul>
+
+          <div class="tab-content opponents active" id="tab-1-content">
+            <h3 class="sidebar-header">Opponents</h3>
+            <ul>
+              <li>
+                <div class="opponent-photo"><img src="img/ellis.jpg" /></div>
+                <div class="opponent-meta">
+                  <span class="opponent-name">Brian Ellis</span>
+                  <span class="opponent-info">Candidate &ndash; R</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-content achievements" id="tab-2-content">
+            <h3 class="sidebar-header">Achievements</h3>
+            <ul>
+              <li class="clearfix">
+                <div class="icon">
+                  <div class="icon-background">
+                    <i class="fa fa-check"></i>
+                  </div>
+                </div>
+                <div class="label">
+                  <span>FreedomWorks for America Endorsed</span>
+                </div>
+              </li>
+              <li>
+                <div class="icon">
+                  <div class="icon-background">
+                    <i class="fa fa-heart"></i>
+                  </div>
+                </div>
+                <div class="label">
+                  <span>Some Other FreedomWorks Award</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-content election-dates" id="tab-3-content">
+            <h3 class="sidebar-header">Elections</h3>
+            <ul>
+              <li>
+                <h4>Primary</h4>
+                <span>August 7, 2012</span>
+              </li>
+              <li>
+                <h4>General</h4>
+                <span>November 6, 2012</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-content candidate-links" id="tab-4-content">
+            <h3 class="sidebar-header">Links</h3>
+            <ul>
+              <li><a href="#">Campaign Site</a></li>
+              <li><a href="#">Facebook Page</a></li>
+              <li><a href="#">YouTube Channel</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <!-- End Sidebar Mobile -->
+
     </div>
+
+     <div class='content-bg'></div>    
 
     <script src="js/jquery-1.0.js"></script>
     <script src="js/main.js"></script>
