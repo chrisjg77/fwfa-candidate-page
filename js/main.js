@@ -51,4 +51,16 @@ $(function() {
     switchTab(tabsSelector, clickedTabId);
   });
 
+
+  $(window).scroll(function() {
+
+
+    $('.sidebar-inner').css('top',$(this).scrollTop());
+
+
+  });
+
+
+
+
 });
