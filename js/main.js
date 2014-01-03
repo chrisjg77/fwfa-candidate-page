@@ -54,7 +54,18 @@ $(function() {
   $(window).scroll(function() {
 
 
-    $('.sidebar-inner').css('top',$(this).scrollTop());
+    var window_h = $(this).height();
+    var sidebar_h = $('.sidebar').height();
+
+    if (window_h > sidebar_h) {
+
+      $('.sidebar-inner').css('top',$(this).scrollTop());
+
+    } else {
+
+      $('.sidebar-inner').css('top',0);
+
+    }
 
 
   });

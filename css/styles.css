@@ -224,13 +224,13 @@ SCAFFOLDING
 .sidebar {
   float: left;
   width: 250px;
-  padding-top: 7em;
 }
 
 .body-content {
   padding-left: 0;
-  padding-top: 7em;
+  margin-top: 7em;
   border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
   background: #fff;
   min-height: 2000px;
 }
@@ -292,6 +292,7 @@ SIDEBAR
 
 .candidate-id img {
   width: 100%;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.25);
 }
 
 .candidate-info .tabs {
@@ -342,6 +343,7 @@ SIDEBAR
 
   .opponents ul .opponent-photo img {
     width: 100%;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.25);
   }
 
   .opponents ul .opponent-meta {
@@ -491,7 +493,7 @@ h1 {
   background: #1c3744 url('../img/page-title-pattern.jpg');
   color: #fff;
   padding: 1em 1rem 1em 1.3rem;
-  width: 97%;
+  width: 96.1%;
   left: -1px;
   text-shadow: -1px -1px 0px rgba(0,0,0,0.3)
 }
@@ -546,7 +548,8 @@ h1 {
   font-size: 1.1em;
 }
 
-h2 {
+h2 { 
+  width: 101%;
   margin: 0;
   padding-right: 15px;
   font-size: 1.1em;
@@ -1100,6 +1103,7 @@ MEDIA QUERIES
 
 
   .content-bg { 
+    display: none;
     width: 50%;
     height: 100%;
     position: fixed;
