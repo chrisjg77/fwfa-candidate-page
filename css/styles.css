@@ -17,7 +17,14 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #eee;
+  background: #ffffff;
+  background: -moz-linear-gradient(top,#ffffff 0%,#e8ebf0 100%);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#ffffff),color-stop(100%,#e8ebf0));
+  background: -webkit-linear-gradient(top,#ffffff 0%,#e8ebf0 100%);
+  background: -o-linear-gradient(top,#ffffff 0%,#e8ebf0 100%);
+  background: -ms-linear-gradient(top,#ffffff 0%,#e8ebf0 100%);
+  background: linear-gradient(to bottom,#ffffff 0%,#e8ebf0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff',endColorstr='#e8ebf0',GradientType=0 );
 }
 
 p {
@@ -379,7 +386,7 @@ SIDEBAR
   }
 
   .opponent-meta .opponent-info {
-    color: #666;
+    color: #333;
     margin-top: 0.15em;
   }
 
@@ -434,7 +441,7 @@ SIDEBAR
 
   .achievements .label {
     padding-left: 1em;
-    color: #666;
+    color: #333;
   }
 
   /*
@@ -465,7 +472,7 @@ SIDEBAR
 
   .election-dates span {
     font-size: 0.9em;
-    color: #666;
+    color: #333;
   }
 
   /*
@@ -1199,7 +1206,7 @@ MEDIA QUERIES
 
   .phone-banking .section-content { margin: 1em 0 3em; max-height: 20px;  }
   .phone-banking .section-content p { width: 74%; float: left; }
-  .phone-banking .phone-banking-button a { width: 23%; float: left; margin-top: -0.5em; }
+  .phone-banking .phone-banking-button a { width: 23%; float: left; margin-top: -0.5em; margin-left: 1%; }
 
   .nav-bar {
     position: fixed;
@@ -1216,7 +1223,7 @@ MEDIA QUERIES
 
   .nav-content {
     height: 4em;
-    background: rgba(255,255,255,0.95);
+    background: #ebeef2;
     box-shadow: 0 1px 8px rgba(0,0,0,0.4);
     position: fixed;
     z-index: 99;
