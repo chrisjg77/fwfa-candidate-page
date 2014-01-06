@@ -87,7 +87,6 @@ select {
 
 .clearfix:after {
   content: ""; 
-  display: table;
   clear: both;
 }
 
@@ -219,6 +218,8 @@ TABS
 .tabs li.active {
   color: #000;
   background: transparent;
+  border-bottom: none !important;
+
 }
 
 .tab-content {
@@ -580,16 +581,18 @@ h1 {
 h2 { 
   width: 101%;
   margin: 0;
-  padding-right: 15px;
-  font-size: 1.1em;
-  background: url('../img/box-label-right.png') no-repeat 100% 0;
-  background-size: auto 100%;
   color: #fff;
-  text-shadow: -1px -1px 0px rgba(0,0,0,0.3)
+  text-shadow: -1px -1px 0px rgba(0,0,0,0.3);
+  font-size: 1.1em;
+  /*
+  padding-right: 15px;
+  background: url('../img/box-label-right.png') no-repeat 100% 0;
+  background-size: auto 100%; */
+
 }
 
 h2 span {
-  padding: 0.5em 0 0.5em 2%;
+  padding: 0.5em 1px 0.5em 2%;
   width: 97%;
   display: block;
   background: #4488ab;
@@ -599,6 +602,8 @@ h2 span {
   padding: 2em;
   font-size: 0.9em;
 }
+
+.donation-info .section-content { position: relative; }
 
 .donation-info .mobile-button,
 .phone-banking .mobile-button {
@@ -631,6 +636,49 @@ h2 span {
     vertical-align: middle;
     width: 100%;
   }
+
+  .boom-counter-kickoff-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 25%;
+    border-right: 1px dashed rgba(255,255,255,0.7);
+    background: #c9431b;
+  }
+
+  .boom-counter-kickoff-overlay span {
+    position: absolute;
+    top: 28%;
+    right: 0.45em;
+    font-size: 0.75em;
+    color: rgba(255,255,255,0.8);
+    cursor: pointer;
+    margin-right: 1px;
+  }
+
+  .boom-counter-kickoff-overlay span .fa-info-circle { font-size: 1.3em; position: relative; top: 1px; }
+
+  @media (max-width: 500px) { .boom-counter-kickoff-overlay span { display: none; } }
+
+  @media (max-width: 860px) { .boom-counter-kickoff-overlay span .fa-info-circle { visibility: hidden; } }
+  
+
+  .kickoff-info {
+    overflow: hidden;
+    max-height: 0;
+    margin-top: 50px;
+    padding: 0 1em;
+    -webkit-transition: all 0.25s;
+       -moz-transition: all 0.25s;
+        -ms-transition: all 0.25s;
+         -o-transition: all 0.25s;
+            transition: all 0.25s;
+  }
+
+  .kickoff-info.open { max-height: 500px; }
+
+  .kickoff-info i { cursor: pointer; }
 
   .stats {
     display: block;
@@ -680,6 +728,8 @@ h2 span {
   }
 
   .boom-counter-base {
+    overflow: hidden;
+    position: relative;
     width: 74%;
     display: inline-block;
     float: left;
@@ -696,7 +746,16 @@ h2 span {
     background: #66A344;
     -webkit-border-radius:  1.25rem;
     -moz-border-radius:     1.25rem;
-     border-radius:         1.25rem;
+    border-radius:         1.25rem;
+
+    -webkit-border-top-right-radius:  0;
+    -moz-border-top-right-radius:     0;
+    border-top-right-radius:          0;
+
+    -webkit-border-bottom-right-radius:  0;
+    -moz-border-bottom-right-radius:     0;
+    border-bottom-right-radius:          0;
+
 
     -webkit-transition: all 2s;
     -moz-transition: all 2s;
@@ -1011,6 +1070,8 @@ MEDIA QUERIES
     width: auto;
     height: 2.5rem;
     font-size: 0.8em;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
   }
 
   .achievements .label {
@@ -1202,7 +1263,9 @@ MEDIA QUERIES
 
   .donate-button { width: 23%; float: left; margin-left: 2%;  }
 
+  /*
   .donation-info .section-content { max-height: 170px; }
+  */
 
   .phone-banking .section-content { margin: 1em 0 3em; max-height: 20px;  }
   .phone-banking .section-content p { width: 74%; float: left; }

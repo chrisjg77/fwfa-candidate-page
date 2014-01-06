@@ -46,10 +46,23 @@ $(function() {
 
       } else {
 
-          $section.removeClass('all');
-          $section.find('.view-all').html('View All <i class="fa fa-angle-down"></i>');
+        $section.removeClass('all');
+        $section.find('.view-all').html('View All <i class="fa fa-angle-down"></i>');
 
       }
+    });
+
+
+    $('.boom-counter-kickoff-overlay').click(function() {
+
+      $('.kickoff-info').addClass('open');
+
+    });
+
+    $('.kickoff-info i').click(function() {
+
+      $('.kickoff-info').removeClass('open');
+
     });
 
   });
