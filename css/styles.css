@@ -532,6 +532,7 @@ h1 {
 .title-desktop .subtitle-text {
   display: block;
   padding-left: 1.4rem;
+  text-transform: uppsercase;
 }
 
 .title-desktop .title-text {
@@ -649,8 +650,7 @@ h2 span {
     bottom: 0;
     left: 0;
     width: 25%;
-    border-right: 1px dashed rgba(255,255,255,0.7);
-    background: #c9431b;
+    border-right: 2px dashed #c9431b;
   }
 
   .boom-counter-kickoff-overlay span {
@@ -658,7 +658,7 @@ h2 span {
     top: 28%;
     right: 0.45em;
     font-size: 0.75em;
-    color: rgba(255,255,255,0.8);
+    color: rgba(0,0,0,0.8);
     cursor: pointer;
     margin-right: 1px;
   }
@@ -689,15 +689,22 @@ h2 span {
     list-style: none;
     width: 100%;
     padding: 0;
-    margin: 2em 0 1em;
+    margin: 1em 0 0 0.5em; 
   }
 
   .stats li {
     text-align: right; 
-    padding: 5px 0 0 1em;
-    margin: 0 1em 0;
+    padding: 1em;
+    margin-right: 1em;
     display: inline-block;
-    border-top: 2px solid #ddd;
+    background: #f6f7f8;
+    text-align: left;
+    text-decoration: none;
+    border: 1px solid #e1e4e9;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 1em;
   }
 
   .stats li .stat-figure,
@@ -745,7 +752,7 @@ h2 span {
   }
 
   .boom-counter-fill {
-    width: 43.33333%;
+    width: 15%;
     height: 100%;
     background: #66A344;
     -webkit-border-radius:  1.25rem;
@@ -885,7 +892,7 @@ h2 span {
 
   .news-stream li {
     margin-top: 1.25em;
-    color: #666;
+    color: #333;
   }
 
   .news-stream li:first-child {
