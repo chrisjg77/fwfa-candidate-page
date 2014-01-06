@@ -79,7 +79,7 @@ select {
 }
 
 .clearfix:after {
-  content: "";
+  content: ""; 
   display: table;
   clear: both;
 }
@@ -194,7 +194,6 @@ TABS
 .tabs {
   width: 100%;
   display: table;
-  border-top: 1px solid #ddd;
 }
 
 .tabs li {
@@ -250,8 +249,6 @@ SCAFFOLDING
 
 .body-content {
   padding-left: 0;
-  margin-top: 7em;
-  margin-bottom: 3em;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
@@ -264,32 +261,28 @@ SCAFFOLDING
 NAV BAR
 ===============================================
 */
-
-.nav-bar {
-  position: fixed;
-  width: 100%;
-}
-
-.nav-spacer {
-  height: 1.25em;
-  background: rgba(255,255,255,0.6);
-  position: fixed;
-  z-index: 98;
-  width: 100%;
-}
-
 .nav-content {
-  height: 4em;
-  background: rgba(255,255,255,0.95);
-  box-shadow: 0 1px 8px rgba(0,0,0,0.4);
-  position: fixed;
-  z-index: 99;
+  display: block;
   width: 100%;
-  margin-top: 1.25em;
+  height: 94px;
+  float: none;
+  border-bottom: 1px solid #d1d7e2;
+  text-align: center;
+  margin: 0;
 }
+
 
 header.wrapper { padding: 0; }
+
+header .inner a img { 
+  width: 158px;
+  height: 65px;
+  margin-top: 15px;
+}
+
+/*
 header .inner a img { margin-top: -15px; }
+*/
 
 /*
 ===============================================
@@ -547,8 +540,8 @@ h1 {
   margin-top: 0.25em;
   font-size: 0.8em;
   text-align: center;
-  color: #fff;
-  border: 1px solid #fff;
+  color: #888;
+  border: 1px solid #888;
   text-shadow: none;
   -webkit-border-radius:  50%;
   -moz-border-radius:     50%;
@@ -633,6 +626,7 @@ h2 span {
   }
 
   .stats {
+    display: block;
     list-style: none;
     width: 100%;
     padding: 0;
@@ -722,8 +716,7 @@ h2 span {
     padding-left: 2%;
     padding-right: 2%;
     margin-top: 0.1em;
-    margin-left: 0.75em;
-    width: 23%;
+    width: 94%;
   }
 
   /*
@@ -738,29 +731,24 @@ h2 span {
     position: relative;
     padding-bottom: 2.5em;
     margin-bottom: 2em;
-    min-height: 60px;
-    height: 60px;
-    -webkit-transition: height 0.5s;
-    -moz-transition: height 0.5s;
-    -ms-transition: height 0.5s;
-    -o-transition: height 0.5s;
-    transition: height 0.5s;
+    max-height: 60px;
+    -webkit-transition: max-height 0.5s;
+    -moz-transition: max-height 0.5s;
+    -ms-transition: max-height 0.5s;
+    -o-transition: max-height 0.5s;
+    transition: max-height 0.5s;
   }
 
-  .distribution-centers .section-content.all {
-
-    height: auto;
-
-  }
+  .distribution-centers .section-content.all { max-height: 2000px; }
 
   .distribution-centers .view-all {
-
     position: absolute;
     left: 2em;
     bottom: 0em;
     cursor: pointer;
-
   }
+
+  .distribution-centers .view-all i { margin-left: 5px; }
 
   .distribution-centers .address {
     float: left;
@@ -913,10 +901,6 @@ MEDIA QUERIES
     display: none;
   }
 
-  .nav-content {
-    height: 3em;
-  }
-
   /*
   ========================= 
   SIDEBAR
@@ -1043,15 +1027,13 @@ MEDIA QUERIES
 
   .body-content h2 {
     margin: 0;
-    padding: 0.5rem 1rem;
     font-size: 1.1em;
-    background: #eee;
     border-top: none;
   }
 
   .section-content {
     font-size: 1em;
-    padding-right: 1em;
+    padding-right: 2em;
   }
 
   .mobile-button {
@@ -1120,6 +1102,12 @@ MEDIA QUERIES
     padding: 1rem;
   }
 
+  .distribution-centers .section-content { 
+    padding-bottom: 3.5em;
+  }
+
+  .distribution-centers .section-content .view-all { left: 1em; }
+
   .downloads ul li {
     float: none;
     width: 100%;
@@ -1174,6 +1162,8 @@ MEDIA QUERIES
   }
 
   .body-content { 
+    margin-top: 7em;
+    margin-bottom: 3em;
     margin-left: 250px; 
     position: relative;
     z-index: 50;
@@ -1203,10 +1193,58 @@ MEDIA QUERIES
     transition: opacity 0.15s ease-in-out;
   }
 
-  .phone-banking .section-content { margin: 1em 0 3em; }
+  .donate-button { width: 23%; float: left; margin-left: 2%;  }
+
+  .donation-info .section-content { max-height: 170px; }
+
+  .phone-banking .section-content { margin: 1em 0 3em; max-height: 20px;  }
   .phone-banking .section-content p { width: 74%; float: left; }
   .phone-banking .phone-banking-button a { width: 23%; float: left; margin-top: -0.5em; }
 
+  .nav-bar {
+    position: fixed;
+    width: 100%;
+  }
+
+  .nav-spacer {
+    height: 1.25em;
+    background: rgba(255,255,255,0.6);
+    position: fixed;
+    z-index: 98;
+    width: 100%;
+  }
+
+  .nav-content {
+    height: 4em;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 1px 8px rgba(0,0,0,0.4);
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    margin-top: 1.25em;
+    text-align: left;
+  }
+
+  .nav-content img { width: 224px; }
+
+  header .inner a img { 
+    width: 224px;
+    height: auto;
+    margin-top: -15px;
+    margin-left: 1em;
+  }
+
+  .title-mobile .social-networks-mobile a,
+  .title-mobile .social-networks-mobile a:visited,
+  .title-desktop .social-networks-desktop a,
+  .title-desktop .social-networks-desktop a:visited {
+    color: #fff;
+    border: 1px solid #fff;
+  }
 
 }
+
+
+
+
 

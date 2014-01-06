@@ -37,8 +37,19 @@ $(function() {
 
     $('.view-all').click(function() {
 
-      $('.distribution-centers .section-content').addClass('all');
+      $section = $('.distribution-centers .section-content');
 
+      if ( ! $section.hasClass('all') ) {
+
+        $section.addClass('all');
+        $section.find('.view-all').html('Close <i class="fa fa-angle-up"></i>');
+
+      } else {
+
+          $section.removeClass('all');
+          $section.find('.view-all').html('View All <i class="fa fa-angle-down"></i>');
+
+      }
     });
 
   });
