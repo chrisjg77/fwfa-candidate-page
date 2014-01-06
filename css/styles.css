@@ -25,6 +25,28 @@ p {
   line-height: 1.5;
 }
 
+a {
+  color: #4488ab;
+  text-decoration: none;
+  -webkit-transition: color .15s ease-in-out;
+  -moz-transition: color .15s ease-in-out;
+  -ms-transition: color .15s ease-in-out;
+  -o-transition: color .15s ease-in-out;
+  transition: color .15s ease-in-out;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+a.ui-element {
+
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-top: 5px;
+
+}
+
+
+
 a,
 a:hover {
   text-decoration: none;
@@ -229,10 +251,11 @@ SCAFFOLDING
 .body-content {
   padding-left: 0;
   margin-top: 7em;
+  margin-bottom: 3em;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   background: #fff;
-  min-height: 2000px;
 }
 
 
@@ -542,7 +565,7 @@ h1 {
    transition: all 0.25s;
 }
 
-.title-desktop .social-networks-desktop a:hover i { top: 0.05em; }
+.title-desktop .social-networks-desktop a:hover i { top: 0.15em; }
 
 .title-desktop .social-networks-desktop {
   position: absolute;
@@ -574,7 +597,6 @@ h2 span {
 
 .section-content {
   padding: 2em;
-  padding-right: 3em;
   font-size: 0.9em;
 }
 
@@ -600,8 +622,6 @@ h2 span {
   ========================= 
   */
 
-.section-content {
-  }
 
   .donation-info .boom-counter,
   .donation-info .stats {
@@ -685,8 +705,11 @@ h2 span {
 
   .boom-counter-fill.start {
 
+    /*
     width: 0;
     background: #c9431b;
+    */
+     background: #66A344;
 
   }
   
@@ -710,9 +733,39 @@ h2 span {
   */
 
 
+  .distribution-centers .section-content {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 2.5em;
+    margin-bottom: 2em;
+    min-height: 60px;
+    height: 60px;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    -o-transition: height 0.5s;
+    transition: height 0.5s;
+  }
+
+  .distribution-centers .section-content.all {
+
+    height: auto;
+
+  }
+
+  .distribution-centers .view-all {
+
+    position: absolute;
+    left: 2em;
+    bottom: 0em;
+    cursor: pointer;
+
+  }
+
   .distribution-centers .address {
     float: left;
     margin-right: 3em;
+    margin-bottom: 3em;
   }
 
   .distribution-centers .address:first-child {

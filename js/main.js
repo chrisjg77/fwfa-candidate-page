@@ -29,9 +29,17 @@ $(function() {
   // ======================================================
 
   $(document).ready(function() {
+
     setContentOffset('.nav-bar', '.wrapper');
 
     $('.boom-counter-fill').removeClass('start');
+
+
+    $('.view-all').click(function() {
+
+      $('.distribution-centers .section-content').addClass('all');
+
+    });
 
   });
 
