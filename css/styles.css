@@ -113,6 +113,12 @@ select {
   margin-left: auto;
 }
 
+.spacer {
+  width: 100%; 
+  display: block; 
+  height: 50px;
+}
+
 /*
 ===============================================
 BUTTONS
@@ -660,10 +666,8 @@ h2 span {
   .boom-counter-kickoff-overlay span .fa-info-circle { font-size: 1.3em; position: relative; top: 1px; }
 
   @media (max-width: 500px) { .boom-counter-kickoff-overlay span { display: none; } }
-
   @media (max-width: 860px) { .boom-counter-kickoff-overlay span .fa-info-circle { visibility: hidden; } }
   
-
   .kickoff-info {
     overflow: hidden;
     max-height: 0;
@@ -1220,6 +1224,8 @@ MEDIA QUERIES
 
 @media (min-width: 768px) {
 
+  .spacer { display: none; }
+  
   .sidebar-inner { 
     width: 220px;
     position: relative; 
