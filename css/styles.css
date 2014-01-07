@@ -1298,6 +1298,7 @@ MEDIA QUERIES
     position: fixed;
     z-index: 98;
     width: 100%;
+    display: block;
   }
 
   .nav-content {
