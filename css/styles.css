@@ -8,6 +8,7 @@ html,
 body {
   width: 100%;
   overflow-x: hidden;
+  padding-bottom: 3em;
 }
 
 html {
@@ -30,6 +31,27 @@ body {
 p {
   margin: 0;
   line-height: 1.5;
+}
+
+p.secondary { margin-top: 1.5em; }
+.secondary { 
+  opacity: 0.85;
+  font-size: 0.8em; 
+  padding: 1em;
+  margin: 2em 1em;
+  max-width: 270px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.bordered { border: 1px solid #333; }
+
+.minimal { 
+  margin-top: 6em;
+  padding-top: 1em; 
+  width: 100%;
+  border-top: 1px solid #ddd;
+  box-shadow: inset 0 1px 0 #fff;
 }
 
 a {
@@ -118,6 +140,9 @@ select {
   display: block; 
   height: 50px;
 }
+
+.desktop { display: none; }
+.mobile { display: block; }
 
 /*
 ===============================================
@@ -332,6 +357,8 @@ SIDEBAR
 .candidate-info .tab-content {
   display: block;
 }
+
+.bio.mobile { border-bottom: 1px solid #ddd; }
 
 .sidebar-header {
   font-size: 1.1em;
@@ -731,6 +758,9 @@ h2 span {
     */
   }
 
+  .equals { font-size: 3em; position: relative; top: -.2em; }
+
+
   .stats li .stat-figure,
   .stats li .stat-label {
     display: block;
@@ -990,6 +1020,9 @@ MEDIA QUERIES
 
   .sidebar.mobile {
     display: block;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
   }
 
   .sidebar.desktop {
@@ -1257,9 +1290,22 @@ MEDIA QUERIES
 
 }
 
+
+  /*
+  ========================= 
+  FOOTER
+  ========================= 
+  */
+
+
+
+
 @media (min-width: 768px) {
 
   .spacer { display: none; }
+
+  .desktop { display: block; }
+  .mobile { display: none; }
   
   .sidebar-inner { 
     width: 220px;
