@@ -600,6 +600,13 @@ h1 {
    transition: all 0.25s;
 }
 
+.social-networks-desktop .label { 
+  font-size: 0.8em; 
+  font-weight: 400; 
+  position: relative; top: 0.3em; 
+  margin-right: 0.25em;
+}
+
 .title-desktop .social-networks-desktop a:hover i { top: 0.15em; }
 
 .title-desktop .social-networks-desktop {
