@@ -719,11 +719,13 @@ h2 span {
     z-index: 10;
   }
 
-  .kickoff-info div.pointer {
-    top: -11px;
-    left: 17%;
+  .pointer-wrapper { width: 65%; display: block; position: relative; top: 3.8em; }
+
+  div.pointer {
+    top: 0;
+    left: 24%;
     position: absolute;
-    z-index: 1;
+    z-index: 11;
     display: block;
     -webkit-transform:rotate(45deg);
     transform:rotate(45deg);
@@ -1411,6 +1413,8 @@ MEDIA QUERIES
   .boom-counter .days { font-size: 1.1em; margin-bottom: 0; }
 
   .boom-counter .days { float: left; margin-right: 1em; margin-bottom: 0.75em; }
+
+  .pointer-wrapper { width: 73%; display: block; position: relative; top: 3.8em; }
 
 
 }
