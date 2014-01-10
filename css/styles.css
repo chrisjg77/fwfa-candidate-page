@@ -751,28 +751,36 @@ h2 span {
 
   .stats li {
     text-align: right; 
-    padding: 1em;
-    margin-right: 1em;
+    padding: 1em 0.5em;
+    margin-right: 2em;
     display: inline-block;
     text-align: left;
-    /*
-    background: #f6f7f8;
-    
-    text-decoration: none;
-    border: 1px solid #e1e4e9;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    margin-bottom: 1em;
-    */
+    width: auto;
+    max-width: 30%;
   }
 
-  .equals { font-size: 3em; position: relative; top: -.2em; }
+  .stats li.donors { min-width: 80%; margin-right: 0; }
 
+  .stats li.stat-small { display: none; width: auto; max-width: 15%; }
 
   .stats li .stat-figure,
   .stats li .stat-label {
     display: block;
+  }
+
+  .stats li .donors-stat-figure {
+    font-weight: bold;
+    font-size: 3.4em;
+    display: inline-block;
+    margin-right: 0.25em;
+  }
+
+  .stats li .donors-stat-label {
+    display: inline-block;
+    width: 90px;
+    font-weight: 600;
+    position: relative;
+    top: -2px;
   }
 
   .stats li .stat-figure {
@@ -1410,9 +1418,9 @@ MEDIA QUERIES
   }
 
   .boom-counter .progress,
-  .boom-counter .days { font-size: 1.1em; margin-bottom: 0; }
+  .boom-counter .days { font-size: 1.1em; margin-bottom: 0; max-width: 300px; float: left; }
 
-  .boom-counter .days { float: left; margin-right: 1em; margin-bottom: 0.75em; }
+  .boom-counter .days { float: right; margin-right: 1em; margin-bottom: 0.75em; }
 
   .pointer-wrapper { width: 73%; display: block; position: relative; top: 3.8em; }
 
@@ -1423,6 +1431,19 @@ MEDIA QUERIES
 
   .boom-counter .progress { float: left; }
   .boom-counter .days { float: right; }
+
+    .stats li {
+      max-width: 17%;
+    }
+
+    .stats li {
+      max-width: 15%;
+    }
+
+    .stats li.donors { min-width: 190px; margin-right: 0; }
+    .stats li.stat-small { display: inline-block; }
+    .caret { display: block; font-size: 1.25em; position: relative; top: -.5em; }
+
 
 }
 
